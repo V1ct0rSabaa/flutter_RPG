@@ -1,23 +1,21 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_string_interpolations
+
 import 'package:flutter/material.dart';
 import 'package:rpg/personagem.dart';
 
-void main(List<String> args) {}
-
-// main p/ testar se o contrutor de map estava funcionando, remover depois
-
+// ignore: must_be_immutable
 class Page3 extends StatelessWidget {
   Page3({Key? key}) : super(key: key);
-
-  Personagem p1 = Personagem.fromMap(personagens[0]);
-  Personagem p2 = Personagem.fromMap(personagens[1]);
-  Personagem p3 = Personagem.fromMap(personagens[2]);
-  Personagem p4 = Personagem.fromMap(personagens[3]);
+  // objetos da classe Personagem, os parametros foram tirados do arquivo personagem.dart
+  Personagem p1 = Personagem.fromMap(listaExemploPersonagens[0]);
+  Personagem p2 = Personagem.fromMap(listaExemploPersonagens[1]);
+  Personagem p3 = Personagem.fromMap(listaExemploPersonagens[2]);
+  Personagem p4 = Personagem.fromMap(listaExemploPersonagens[3]);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      // ignore: prefer_const_constructors
       child: Center(
         child: Container(
           width: 400,
@@ -35,8 +33,8 @@ class Page3 extends StatelessWidget {
                     )),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    // ignore: prefer_const_constructors
                     Center(
                       child: const Text(
                         'Personagens',

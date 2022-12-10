@@ -9,8 +9,8 @@ class Personagem {
   // construtor parametrizado
   Personagem(this._id, this._nome, this._classe, this._nivel, this._inventario);
 
-  // outros construtores precisam de um nome diferente
-  // dart não permite overload de construtor
+  // outros construtores precisam de um nome diferente,
+  // pois a linguagem dart não permite overload de construtor
   Personagem.fromMap(Map<String, dynamic> map) {
     // construtor atraves de Map
     _id = map["id"];
@@ -70,6 +70,7 @@ class Personagem {
   }
 
   String removerItemInventario(String itemRemover) {
+    // checa se o elemento existe e informa o usuario atraves de uma string
     String texto = "$itemRemover não estava no seu inventário";
     if (_inventario.remove(itemRemover)) {
       texto = "$itemRemover foi removido do inventário";
@@ -82,15 +83,9 @@ class Personagem {
     final String texto = "$nome\n$classe lvl.$nivel\nInventário: $inventario";
     return texto;
   }
-
-  // List<Map<String, dynamic>> get personagens => _personagens;
-
-  // set personagens(List<Map<String, dynamic>> personagens) {
-  //   _personagens = personagens;
-  // }
 }
 
-List<Map<String, dynamic>> personagens = [
+List<Map<String, dynamic>> listaExemploPersonagens = [
   {
     "id": 1,
     "nome": "Nome: Eric",

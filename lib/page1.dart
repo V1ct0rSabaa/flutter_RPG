@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unused_local_variable
+
 import 'package:flutter/material.dart';
 
 class Page1 extends StatelessWidget {
@@ -23,11 +25,11 @@ class Page1 extends StatelessWidget {
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
-                )),
+                )
+                ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // ignore: prefer_const_constructors
                 Center(
                   child: const Text(
                     'Seja bem vindo \nao mundo do \nRPG',

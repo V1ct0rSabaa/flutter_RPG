@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
+
 import 'package:flutter/material.dart';
 import 'regras.dart';
 
@@ -8,8 +10,6 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-
-      // ignore: prefer_const_constructors
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -24,7 +24,6 @@ class Page2 extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // ignore: prefer_const_constructors
                 Center(
                   child: const Text(
                     'Regras',
